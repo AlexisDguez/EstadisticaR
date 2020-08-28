@@ -1,0 +1,92 @@
+---
+title: "Funciones y ordenes de vectores"
+author: "Alexis Frías Domínguez"
+date: "6/8/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Funciones
+
+
+Cuando queremos aplicar una función a cada uno de los elementos de un vector de datos, la función **sapply** nos ahorra tener que programar bucles en `R`:
+
+- __sapply(nombre_del_vector, FUN = Nombre_de_función)__ para aplicar dicha función a todos los elementos del vector.
+- __sqrt(x)__ calcula un nuevo vector con las raíces cuadradas de cada uno de los elementos del vector _x_ 
+```{r}
+x = c(1:10)
+sapply(x, FUN = function(elemento){sqrt(elemento)})
+funcion = function(v){v^(v/2)}
+sapply(x, FUN = funcion)
+```
+- __length(x)__ calcula la longitud del vector _x_
+```{r}
+x
+length(x)
+```
+- __max(x)__ calcula el máximo del vector _x_
+```{r}
+x
+max(x)
+```
+- __min(x)__ calcula el mínimo del vector _x_
+```{r}
+x
+min(x)
+```
+- __sum(x)__ calcula la suma de las entradas del vector _x_
+```{r}
+x
+sum(x)
+```
+- __prod(x)__ calcula el producto de las entradas del vector _x_
+```{r}
+x
+prod(x)
+```
+- __mean(x)__ calcula la media aritmética de las entradas del vector _x_
+```{r}
+x
+mean(x)
+```
+
+- __diff(x)__ calcula el vector formado por las diferencias sucesivas entre entradas del vector original _x_
+```{r}
+x
+diff(x)
+```
+
+- __cumsum(x)__ calcula el factor formado por las sumas acumuladas de las entradas del vector original _x_
+  + Permite definir sucesiones descritas mediante sumatorios
+  + Cada entrada de __cumsum(x)__ es la suma de las entradas de *x* hasta su posición
+```{r}
+x
+cumsum(x)
+```
+- __sort(x)__ ordena el vector en orden natural de los objetos que forman: el orden numérico creciente, orden alfabético..
+```{r}
+j = c(3,42,1,9,2)
+j
+sort(j)
+```
+- __rev(x)__ invierte el orden de los elementos del vector _X_
+```{r}
+j
+rev(j)
+```
+
+
+
+
+## Operaciones con vectores
+
+```{r}
+x
+x*(4:8)
+x+x
+2^x
+```
+

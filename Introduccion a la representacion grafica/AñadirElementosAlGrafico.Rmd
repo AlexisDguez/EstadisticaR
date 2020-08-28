@@ -1,0 +1,14 @@
+---
+title: "Añadir puntos y rectas a un grafico"
+author: "Alexis Frías Domínguez"
+date: "15/8/2020"
+output: pdf_document
+---
+
+# Añadir elementos al grafico
+
+- __points(x,y)__ añade un punto de coordenadas _(x,y)_ a un grafico ya existente 
+- __abline(a,b)__ para añadir una recta a un gtafico ya existente
+  + __abline(a,b)__ añadr la recta _y = ax + b_
+  + __abline(v = x0)__ añade la recta vertical _x = x0, v_ puede estar asignado a un vector
+  + __abline(h = y0)__ añade la recta horizontal __y = y0, h__ puede estar asignado a un vector
