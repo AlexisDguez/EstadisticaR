@@ -1,0 +1,71 @@
+---
+title: "Subvectores y filtros"
+author: "Alexis Frías Domínguez"
+date: "7/8/2020"
+output: pdf_document
+---
+# Subvectores
+
+- **Vectores[i]** de la _i_-ésima entrada del vector
+```{r}
+vec = c(1,5,3,8,4)
+vec[1]
+```
+
+  + Los índices en `R` empiezan en 1
+  + **vector[length(vector)]** nos da la última entrada del vector
+```{r}
+ vec[length(vec)]
+```
+
+  + **vector[a:b]** si _a_ y _b_ son dos números naturales, nos da el subvector con las entradas del vector original que van de la posición _a_-ésima hasta la _b_-ésima
+```{r}
+vec[2:4]
+```
+
+  + **vector[-i]** si _i_ es un número, este subvector está formado por todas las entradas del vector original menos la entrada _i_-ésima. Si _i_ resulta ser un vector, entonces es un vector de índices y crea un nuevo vector con las entradas del vector original, cuyos índices pertenecen a _i_
+```{r}
+vec[-2]
+```
+
+  + **vector[-x]** si _x_ es un vector (de índices), entonces este es el complementario del vector [*x*]
+```{r}
+vector_x = c(1:4)
+vector_i = c(1,vector_x)
+vector_i
+vector_i[-2]
+```
+
+## Condicionales
+
+- **which(x cumple condición)** para obtener los índices de las entradas del vector _x_ que satisface la condición dada
+```{r}
+x = c(5,63,8,3,9,3,7,63)
+which(x<8)
+x[x<8]
+```
+
+- **which.min(x)** nos da la primera posición en la que el vector _x_ toma su valor mínimo
+```{r}
+which.min(x)
+x[which.min(x)]
+```
+
+- **which(x == min(x))** da todas las posiciones en las que el vector _x_ toma sus valores mínimos 
+```{r}
+which(x == min(x))
+x[which(x == min(x))]
+```
+
+- **which.max(x)** nos da la primera posición en la que el vector _x_ toma su valor máximo
+```{r}
+which.max(x)
+x[which.max(x)]
+```
+
+- **which(x == max(X))** da todas las posiciones en las que el vector _x_ toma sus valores máximos
+```{r}
+which(x == max(x))
+x[which(x == max(x))]
+```
+

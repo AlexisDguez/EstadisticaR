@@ -1,0 +1,29 @@
+---
+title: "Vectores y tipos de datos"
+author: "Alexis Frías Domínguez"
+date: "6/8/2020"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+Hay varios tipos de datos en `R`, pero en un vector sólo puede tener **uno** de estos.
+
+Si se quieren usar varios tipos de datos se deber usar una **lista**
+
+## Básico
+
+
+- **c()** para definir un vector
+```{r}
+x = c(1,2,3)
+```
+- **scan()** para definir un vector
+- **fix()** para modificar visualmente el vector x
+- **rep(a,n)** para definir un vector constante que contiene el dato **a**  repetido **n** veces
+```{r}
+rep("Alexis", 7)
+```
+- **class(x)** para saber el tipo de dato que hay en el vector x
+

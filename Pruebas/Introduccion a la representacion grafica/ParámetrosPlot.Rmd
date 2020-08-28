@@ -1,0 +1,21 @@
+---
+title: "Parámetros de la función plot"
+author: "Alexis Frías Domínguez"
+date: "14/8/2020"
+output: pdf_document
+---
+
+# Parámetros de la función plot()
+
+- __log__ para indicar que queremos el grafico en escala logaritmica
+- __main("titulo")__ para poner titulo al grafico. Si en vez de un texto querais poner una expresion matematica, teneis que utilizar la funcion __expression()__
+- __xlab("etiqueta")__ para poner etiqueta al eje _X_
+- __ylab("etiqueta")__ para poner al eje _Y_
+- __pch=n__ para elegir el simbolo de los puntos. _n=0,1,...,25._ El valor por defecto es __pch = 1__
+- __cex__ para elegir el tamaño de los simbolos
+- __col="color en ingles"__ para elegir el color de los simbolos
+
+```{r}
+plot(exp(1:6), xlab = "Alumnos", ylab = "Notas",  main = "Este es el titulo" )
+```
+
