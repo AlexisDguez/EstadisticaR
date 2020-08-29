@@ -1,0 +1,38 @@
+---
+title: "Data frames"
+author: "Alexis Frías Domínguez"
+date: "28/8/2020"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+__Data frame.__ Un data frame es una tabla de doble entrada, formada por variables en las  columnas y observaciones de estas variables en las filas, de manera en que cada fila contiene los valores de las variables para un mismo caso o mismo individuo.
+
+- __data()__ para abrir una ventana con la lista de los objetos de datos a los que tenemos acceso en la sesión actual de `R` (los que la instalación básica de `R` y los que aportan los paquetes que tengamos cargados)
+
+  + Si entramos __data(package=.packages(all.available = TRUE))__ obtendremos la lista de todos los objetos de datos a los que tenemos acceso, incluyendo los de los paquetes que tengamos instalados, pero que no estén cargados en la sesión actual.
+  
+```{r}
+df = iris
+df
+```
+
+# Obteniendo información del data frame
+
+- __head(df,n)__ para mostrar las _n_ primeras filas del data frame. Por defecto se muestran las 6 primeras filas.
+
+- __tail(df,n)__ para mostrar las _n_ últimas filas de data frame. Por defecto se muestran las 6 últimas.
+
+- __str(df)__ para conocer la estructura global de un data frame.
+
+- __names(df)__ para producir un vector con los nombres de las columnas.
+
+```{r}
+str(iris)
+names(iris)
+```
+
